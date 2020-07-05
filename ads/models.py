@@ -13,7 +13,7 @@ class Ads(models.Model):
   price  = models.IntegerField()
   published = models.BooleanField(default=False)
   negotiable = models.BooleanField(default=False)
-  Used = models.BooleanField(default=False)
+  used = models.BooleanField(default=False)
   main_photo = models.ImageField(upload_to='photos/%Y/%m/%d/')
   photo_1 = models.ImageField(upload_to='photos/%Y/%m/%d',blank=True)
   photo_2 = models.ImageField(upload_to='photos/%Y/%m/%d',blank=True)
