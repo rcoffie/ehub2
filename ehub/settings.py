@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'pages.apps.PagesConfig',
     'ads',
     'sellers',
+    'django.contrib.humanize',
 ]
 
 MIDDLEWARE = [
