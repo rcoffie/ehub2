@@ -5,5 +5,5 @@ urlpatterns = [
     
    path('',views.index,name='ads'),
    #path('ad/',views.ad,name='ad')
-   path('<int:ad_id>',views.ad)
+   path('<int:ad_id>',views.ad,name='ad')
 ]

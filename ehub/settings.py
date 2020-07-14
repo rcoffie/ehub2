@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'ads',
     'sellers',
     'django.contrib.humanize',
+    'phonenumber_field',
 ]
 
 MIDDLEWARE = [
