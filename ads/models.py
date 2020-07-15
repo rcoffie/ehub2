@@ -45,7 +45,7 @@ class Ads(models.Model):
   description = models.TextField()
   price  = models.IntegerField()
   brand  = models.CharField(max_length=200,null=True)
-  phone_number = PhoneNumberField(null=True)
+
   published = models.BooleanField(default=False)
   negotiable = models.BooleanField(default=False)
   used = models.BooleanField(default=False)
