@@ -1,7 +1,7 @@
 from django.db import models
 from sellers.models import Seller
 from datetime import datetime 
-from phonenumber_field.modelfields import PhoneNumberField
+#from phonenumber_field.modelfields import PhoneNumberField
 
 # Create your models here.
 

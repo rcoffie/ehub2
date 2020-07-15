@@ -24,9 +24,38 @@ def ad(request,ad_id):
 
 
 def search(request):
+
+  query_ads = Ads.objects.order_by('-date_posted')
+
+  #keywords 
+  if 'keywords' in request.GET:
+    keywords = request.GET['keywords']
+    if keywords:
+      query_ads = query_ads.filter(description__icontains=keywords)
+
   
+  #city 
+  if 'city' in request.GET:
+    city = request.GET['city']
+    if city:
+      query_ads = query_ads.filter(city__iexact=city)
+
+
+  #Region
+  if 'region' in request.GET:
+    region = request.GET['region']
+    if 'region':
+      query_ads = query_ads.filter(region__iexact=region)
+
+  
+  #Category
+  if 'category' in request.GET:
+    category = request.GET['category']
+    query_ads = query_ads.filter(category__iexact=category)
+
   context = {
     'ad_region': ad_region,
     'ad_category': ad_category,
+    'ads':query_ads,
   }
   return render(request,'ads/search.html',context)
