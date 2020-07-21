@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'sellers',
     'django.contrib.humanize',
     'phonenumber_field',
+    'accounts',
 ]
 
 MIDDLEWARE = [
